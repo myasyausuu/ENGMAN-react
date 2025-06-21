@@ -1,0 +1,30 @@
+
+.main-content {
+    text-align: center;
+    max-width: 700px;
+    width:100%;
+
+}
+
+.main-content h2 {
+    font: 64px Roboto, sans-serif;
+    color: #09092d;
+    font-weight: bold;
+}
+
+.main-content p {
+    font: 24px Roboto, sans-serif;
+    color: #393781;
+    margin-top: 100px;
+}
+.success {
+    color: #06c30e;
+}
+body {
+    background-image: url("../../assets/images/queen.png");
+    background-repeat: no-repeat;
+    background-position: 100% 105%;
+    background-size: 25%;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
