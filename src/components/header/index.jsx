@@ -1,12 +1,13 @@
 import logo from "../../assets/images/logo.png";
 import search from "../../assets/images/search.png";
 import './style.css';
+import {Link} from 'react-router-dom';
 
-export const Header = ()=>{
-    return  <header className="header">
+export const Header = () => {
+    return <header className="header">
         <div className="header__content">
             <div className="logo">
-                <h1 id="title">ENGMAN</h1>
+                <h1 id="title"><Link to='/'>ENGMAN</Link></h1>
                 <img src={logo} alt="no logo"/>
             </div>
 
