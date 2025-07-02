@@ -6,14 +6,21 @@ import brainIcon from "../../assets/images/Brain.png"
 import "./style.css"
 import {Link} from "react-router-dom";
 
+//тут мы создали массив с объектами внутри
+const links = [
+    {image: booksIcon, link: "books", text: "Books"},
+    {image: youtubeIcon, link: "youtube", text: "YouTube channels"},
+    {image: testIcon, link: "test", text: "Tests"},
+    {image: glossaryIcon, link: "glossary", text: "Dictionary"},
+    {image: brainIcon, link: "brain", text: "Phrase of the Day"},
+]
+// тут треш, какой-то мэппинг который создает переменную автоматически
 export const Navbar = () => {
     return <div className="navbar">
         <ul>
-            <li><Link to="/books">Books <img src={booksIcon} alt="books"/></Link></li>
-            <li><Link to="/youtube">YouTube channels <img src={youtubeIcon} alt="youtube"/></Link></li>
-            <li><Link to="/test">Tests <img src={testIcon} alt="test"/></Link></li>
-            <li><Link to="/glossary">Dictionaries <img src={glossaryIcon} alt="glossary"/></Link></li>
-            <li><Link to="/brain">Phrase of the Day <img src={brainIcon} alt="brain"/></Link></li>
+            {links.map((link)=>{
+                return <li><Link to={"/"+link.link}>{link.text} <img src={link.image} alt={link.link}/></Link></li>
+            })}
         </ul>
     </div>
 }
